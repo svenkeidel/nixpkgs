@@ -14290,6 +14290,10 @@ with pkgs;
     debug = config.flashplayer.debug or false;
   };
 
+  flashplayer11 = callPackage ../applications/networking/browsers/mozilla-plugins/flashplayer/flashplayer11.nix {
+    debug = config.flashplayer.debug or false;
+  };
+
   flashplayer-standalone = callPackage ../applications/networking/browsers/mozilla-plugins/flashplayer/standalone.nix {
     debug = config.flashplayer.debug or false;
   };
@@ -16660,7 +16664,7 @@ with pkgs;
 
   wpsoffice = callPackage ../applications/office/wpsoffice {};
 
-  wrapFirefox = callPackage ../applications/networking/browsers/firefox/wrapper.nix { };
+  wrapFirefox = callPackage ../applications/networking/browsers/firefox/wrapper.nix { flashplayer = flashplayer11; };
 
   wp-cli = callPackage ../development/tools/wp-cli { };
 
