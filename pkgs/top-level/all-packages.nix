@@ -2836,6 +2836,8 @@ in
 
   dbench = callPackage ../development/tools/misc/dbench { };
 
+  dblpbibtex = callPackage ../tools/typesetting/dblpbibtex { };
+
   dclxvi = callPackage ../development/libraries/dclxvi { };
 
   dcraw = callPackage ../tools/graphics/dcraw { };
